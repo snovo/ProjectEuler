@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler", "ProjectEuler\ProjectEuler.fsproj", "{E2A71278-2260-4719-9DA8-EDC302FE4FEB}"
+EndProject
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler_ConsoleMenu", "ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj", "{3B92358B-24B2-4119-AA48-468B96BD0758}"
+EndProject
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler_DeskAPPMenu", "ProjectEuler_DeskAPPMenu\ProjectEuler_DeskAPPMenu.fsproj", "{DF2CB516-B9BD-4216-9223-6538C778A4E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B92358B-24B2-4119-AA48-468B96BD0758}.Debug|x86.ActiveCfg = Debug|x86
+		{3B92358B-24B2-4119-AA48-468B96BD0758}.Debug|x86.Build.0 = Debug|x86
+		{3B92358B-24B2-4119-AA48-468B96BD0758}.Release|x86.ActiveCfg = Release|x86
+		{3B92358B-24B2-4119-AA48-468B96BD0758}.Release|x86.Build.0 = Release|x86
+		{DF2CB516-B9BD-4216-9223-6538C778A4E9}.Debug|x86.ActiveCfg = Debug|x86
+		{DF2CB516-B9BD-4216-9223-6538C778A4E9}.Debug|x86.Build.0 = Debug|x86
+		{DF2CB516-B9BD-4216-9223-6538C778A4E9}.Release|x86.ActiveCfg = Release|x86
+		{DF2CB516-B9BD-4216-9223-6538C778A4E9}.Release|x86.Build.0 = Release|x86
+		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Debug|x86.ActiveCfg = Debug|x86
+		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Debug|x86.Build.0 = Debug|x86
+		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Release|x86.ActiveCfg = Release|x86
+		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj
+	EndGlobalSection
+EndGlobal
