@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler", "ProjectEuler\ProjectEuler.fsproj", "{E2A71278-2260-4719-9DA8-EDC302FE4FEB}"
+Project("{4925A630-B079-445D-BCD4-3A9C94FE9307}") = "ProjectEuler", "ProjectEuler\ProjectEuler.fsproj", "{E2A71278-2260-4719-9DA8-EDC302FE4FEB}"
 EndProject
-Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler_ConsoleMenu", "ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj", "{3B92358B-24B2-4119-AA48-468B96BD0758}"
+Project("{4925A630-B079-445D-BCD4-3A9C94FE9307}") = "ProjectEuler_ConsoleMenu", "ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj", "{3B92358B-24B2-4119-AA48-468B96BD0758}"
 EndProject
-Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler_DeskAPPMenu", "ProjectEuler_DeskAPPMenu\ProjectEuler_DeskAPPMenu.fsproj", "{DF2CB516-B9BD-4216-9223-6538C778A4E9}"
+Project("{4925A630-B079-445D-BCD4-3A9C94FE9307}") = "ProjectEuler_DeskAPPMenu", "ProjectEuler_DeskAPPMenu\ProjectEuler_DeskAPPMenu.fsproj", "{DF2CB516-B9BD-4216-9223-6538C778A4E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
