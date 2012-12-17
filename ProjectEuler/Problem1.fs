@@ -1,18 +1,5 @@
-namespace ProjectEuler
-
+module Problem1
 open System
 
-type Problem1() = 
- let quantityOfCookies  =[|1;2;3;4;5;0|]
- let zero = quantityOfCookies.[5]
-// quantityOfCookies.[5] <- 6
-//  for i in quantityOfCookies 
-//   do
- //   if i = zero then
-  //   printfn "Good job. Eat healthy food."
-  //  else if i = 1 then
-  //   printfn "One cookie won't hurt you."
-  //  else if i = 2 then
-  //   printfn "Two cookies is a nice snack."
-  //  else
-  //   printfn "%d cookies is too many!" i
+//sum of all multiples of 3 or 5 below 1000
+let solve () = [1..999] |> List.filter (fun n -> n % 3 = 0 || n % 5 = 0) |> List.sum 
