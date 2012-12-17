@@ -4,7 +4,7 @@ open System
 open System.Linq 
  
 type public ConsoleMenu (iIdxGoBack : int, iNumProblems : int, iNumProbsByRange) =
- let selectOption = "Selecione o prolema pretendido para verificar a soluçao: "
+ let selectOption = "Select the desired problem to check the solution: "
  let invalidOption = "Invalid Option!"
 
  member this.enterChoice (iGoBack : int) (rangeOptions : list<int>) : int = 

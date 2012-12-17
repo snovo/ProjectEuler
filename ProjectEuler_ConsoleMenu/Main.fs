@@ -20,6 +20,7 @@ let main args =
                                          | 0 -> choiceRange <- consoleMenu.selectRangeOfProblems 
                                          | 1 -> printfn "Solution of problem %d is: %d" choiceProblem ((new Problem1()).Solve())
                                          | 8 -> printfn "Solution of problem %d is: %d" choiceProblem ((new Problem8()).Solve())
+                                         | 2 -> (new CheckSolution(1)).SolveProblem()
                                          | _ -> printfn "You selected problem nº %d" choiceProblem
      | _ -> choiceRange <- consoleMenu.enterChoice 0 [1.. (iNProblems / iNProbByRange)]
     Console.Read()
