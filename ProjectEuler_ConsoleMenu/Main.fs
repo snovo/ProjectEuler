@@ -17,7 +17,7 @@ let main args =
      | a when a > 0 && a < iNumRanges -> choiceProblem <- consoleMenu.selectProblem choiceRange iNProbByRange
                                          match choiceProblem with
                                          | 0 -> choiceRange <- consoleMenu.selectRangeOfProblems 
-                                         | 1 -> Problem1.solve
+                                         | 1 -> printfn "Solution of problem %d is: %d" choiceProblem Problem1.solve
                                          | _ -> printfn "You selected problem nº %d" choiceProblem
      | _ -> choiceRange <- consoleMenu.enterChoice 0 [1.. (iNProblems / iNProbByRange)]
     Console.WriteLine( Problem8.lstIntNumbers |> Problem8.allProducts |> List.max)
