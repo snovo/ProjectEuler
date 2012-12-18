@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="ISolve.fs" />
     <Compile Include="ProbSolutionMethodAttr.fs" />
     <Compile Include="Problem1.fs" />
     <Compile Include="Problem8.fs" />
