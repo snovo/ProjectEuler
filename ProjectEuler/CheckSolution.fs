@@ -1,26 +1,25 @@
 namespace ProjectEuler
 open System
 open System.Reflection 
+module CheckSolution =
 
-type public CheckSolution (iProblem : int) =
+
  let bindingFlags = BindingFlags.Public ||| BindingFlags.NonPublic |||
                      BindingFlags.Instance ||| BindingFlags.Static ||| 
                      BindingFlags.DeclaredOnly
  
-
- member this.SolveProblem() =
-  let iProblemToCheck = iProblem
+ let SolveProblem(iProblem : int) : obj =
   let tyName = "ProjectEuler.Problem" + iProblem.ToString()
-  let mutable tyObj = null
+  let mutable result = null
   let ass = System.Reflection.Assembly.GetExecutingAssembly()
+  
   try
-   let obj = System.Activator.CreateInstance (null, tyName)
-   tyObj <- Type.GetType(tyName)
-   for m in tyObj.GetMethods (bindingFlags) |> Array.filter (fun m -> Array.length(m.GetCustomAttributes(Type.GetType("ProjectEuler.ProbSolutionMethodAttr"), false)) > 0) do
-     let r = m.Invoke(obj,null)
-     Console.WriteLine(r)
+   let wrappedProblemClass : System.Runtime.Remoting.ObjectHandle = System.Activator.CreateInstance (null, tyName)
+   result <- ((Type.GetType(tyName).GetMethods (bindingFlags) |> Array.filter (fun m -> Array.length(m.GetCustomAttributes(Type.GetType("ProjectEuler.ProbSolutionMethodAttr"), false)) > 0) |> Array.map (fun m -> m.Invoke(wrappedProblemClass.Unwrap(), null))).[0])
   with
-  | e -> Console.Clear () 
-         printfn "Erro: %s " e.Message
+  | _ as TypeLoadException -> Console.Clear () 
+                              printfn "Error -> problem not found! Maybe isn't solved yet!"
+  | e as Exception -> Console.Clear () 
+                      printfn "Unknown Error!\n%s " e.Message
   
-  
+  result

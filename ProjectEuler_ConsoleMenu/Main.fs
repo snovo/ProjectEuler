@@ -18,9 +18,10 @@ let main args =
      | a when a > 0 && a < iNumRanges -> choiceProblem <- consoleMenu.selectProblem choiceRange iNProbByRange
                                          match choiceProblem with
                                          | 0 -> choiceRange <- consoleMenu.selectRangeOfProblems 
-                                         | 1 -> printfn "Solution of problem %d is: %d" choiceProblem ((new Problem1()).Solve())
-                                         | 8 -> printfn "Solution of problem %d is: %d" choiceProblem ((new Problem8()).Solve())
-                                         | 2 -> (new CheckSolution(1)).SolveProblem()
-                                         | _ -> printfn "You selected problem nº %d" choiceProblem
+                                         | _ -> let result = (CheckSolution.SolveProblem choiceProblem)
+                                                Console.Write ("Solution of problem {0} is: ",  choiceProblem)
+                                                match result with
+                                                | null -> printfn "UNKNOWN"
+                                                | x -> Console.WriteLine (x)
      | _ -> choiceRange <- consoleMenu.enterChoice 0 [1.. (iNProblems / iNProbByRange)]
     Console.Read()

@@ -10,6 +10,5 @@ type Problem8() =
   | _ -> let f5Elems = (Seq.take 5 x) |> List.ofSeq
          (List.fold (fun acc x2 -> acc*x2)  1 f5Elems) :: (allProducts (List.tail x))
  
- interface ISolve with
- //[<ProbSolutionMethodAttr()>]
+ [<ProbSolutionMethodAttr()>]
   member this.Solve() = lstIntNumbers |> allProducts |> List.max
