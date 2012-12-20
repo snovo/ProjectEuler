@@ -5,6 +5,8 @@ Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler", "ProjectEule
 EndProject
 Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "ProjectEuler_ConsoleMenu", "ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj", "{3B92358B-24B2-4119-AA48-468B96BD0758}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEuler_DeskAPPMenu", "ProjectEuler_DeskAPPMenu\ProjectEuler_DeskAPPMenu.csproj", "{F7B54F7E-CB37-4021-873A-AB81BD22B7F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,8 +21,12 @@ Global
 		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Debug|x86.Build.0 = Debug|x86
 		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Release|x86.ActiveCfg = Release|x86
 		{E2A71278-2260-4719-9DA8-EDC302FE4FEB}.Release|x86.Build.0 = Release|x86
+		{F7B54F7E-CB37-4021-873A-AB81BD22B7F4}.Debug|x86.ActiveCfg = Debug|x86
+		{F7B54F7E-CB37-4021-873A-AB81BD22B7F4}.Debug|x86.Build.0 = Debug|x86
+		{F7B54F7E-CB37-4021-873A-AB81BD22B7F4}.Release|x86.ActiveCfg = Release|x86
+		{F7B54F7E-CB37-4021-873A-AB81BD22B7F4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ProjectEuler_ConsoleMenu\ProjectEuler_ConsoleMenu.fsproj
+		StartupItem = ProjectEuler_DeskAPPMenu\ProjectEuler_DeskAPPMenu.csproj
 	EndGlobalSection
 EndGlobal
