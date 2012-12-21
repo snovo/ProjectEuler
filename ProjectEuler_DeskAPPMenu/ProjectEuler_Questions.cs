@@ -13,12 +13,46 @@ namespace ProjectEuler_DeskAPPMenu
 			_strURLPref = strURLPref;
 		}
 
-		private string ExtractQuestion(string strQuestionPage)
+		private string ExtractHtmlQuestion(string strQuestionPage, string strDivID)
 		{
-			string strBodyPattern = String.Empty, strContentPattern = String.Empty ;
-			strBodyPattern = ".*<body[^>]*>(.*)</body>.*";
-			strContentPattern = ".*<div id=\"content\">.*</div>.*";
-			return System.Text.RegularExpressions.Regex.Replace(strQuestionPage, strContentPattern,"SAPOI", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+			string strResult = String.Empty ;
+			HtmlAgilityPack.HtmlNode divNode = null;
+			HtmlAgilityPack.HtmlDocument htmlDoc = null;
+
+			try
+			{
+				htmlDoc = new HtmlAgilityPack.HtmlDocument();
+				htmlDoc.LoadHtml (strQuestionPage);
+				divNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='" + strDivID + "']");
+				strResult = divNode.OuterHtml;
+			}
+			catch(Exception ex)
+			{
+				strResult = ex.Message;
+			}
+
+			return strResult;
+		}
+
+		private string ExtractTextQuestion(string strQuestionPage, string strDivID)
+		{
+			string strResult = String.Empty ;
+			HtmlAgilityPack.HtmlNode divNode = null;
+			HtmlAgilityPack.HtmlDocument htmlDoc = null;
+			
+			try
+			{
+				htmlDoc = new HtmlAgilityPack.HtmlDocument();
+				htmlDoc.LoadHtml (strQuestionPage);
+				divNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='" + strDivID + "']");
+				strResult = divNode.InnerText;
+			}
+			catch(Exception ex)
+			{
+				strResult = ex.Message;
+			}
+			
+			return strResult;
 		}
 
 		public string GetQuestion(int iProblem)
@@ -35,7 +69,7 @@ namespace ProjectEuler_DeskAPPMenu
 				myResponse = myRequest.GetResponse();
 
 				sr = new StreamReader(myResponse.GetResponseStream(), System.Text.Encoding.GetEncoding(1252)); //System.Text.Encoding.UTF8);
-				result = ExtractQuestion( sr.ReadToEnd());
+				result = ExtractTextQuestion( sr.ReadToEnd(), "content");
 				sr.Close();
 				myResponse.Close();
 			}
@@ -43,7 +77,7 @@ namespace ProjectEuler_DeskAPPMenu
 			{
 				System.Windows.Forms.MessageBox.Show (ex.Message );
 			}
-			return "";
+			return result;
 		}
 	}
 }
