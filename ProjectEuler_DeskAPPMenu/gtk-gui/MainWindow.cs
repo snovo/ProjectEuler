@@ -66,6 +66,7 @@ public partial class MainWindow
 		w4.Position = 1;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.label1 = new global::Gtk.Label ();
+		this.label1.HeightRequest = 30;
 		this.label1.Name = "label1";
 		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("lblResultado");
 		this.vbox1.Add (this.label1);
